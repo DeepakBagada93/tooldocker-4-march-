@@ -48,8 +48,8 @@ export function Header() {
   return (
     <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled
-          ? 'bg-white/95 dark:bg-slate-950/95 backdrop-blur-md shadow-md border-b-primary/20 py-1'
-          : 'bg-white dark:bg-slate-950 border-b py-2 lg:py-3'
+        ? 'bg-white/95 dark:bg-slate-950/95 backdrop-blur-md shadow-md border-b-primary/20 py-1'
+        : 'bg-white dark:bg-slate-950 border-b py-2 lg:py-3'
         }`}
     >
       <div className="container mx-auto px-4">
@@ -59,7 +59,7 @@ export function Header() {
             <div className="bg-primary p-1.5 rounded-lg">
               <Hammer className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold tracking-tighter hidden sm:inline-block">
+            <span className="text-xl font-bold tracking-tighter">
               TOOLDOCKER
             </span>
           </Link>

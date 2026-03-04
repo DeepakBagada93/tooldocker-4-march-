@@ -1,12 +1,12 @@
 'use client';
 
 import { DashboardLayout } from '@/components/layout/dashboard-layout';
-import { 
-  LayoutDashboard, 
-  Users, 
-  Settings, 
-  ShieldCheck, 
-  BarChart3, 
+import {
+  LayoutDashboard,
+  Users,
+  Settings,
+  ShieldCheck,
+  BarChart3,
   MessageSquare,
   Box,
   AlertTriangle
@@ -19,7 +19,6 @@ const ADMIN_ITEMS = [
   { name: 'Category Management', href: '/admin/categories', icon: LayoutDashboard },
   { name: 'Commission Config', href: '/admin/commission', icon: Settings },
   { name: 'Dispute Resolution', href: '/admin/disputes', icon: AlertTriangle },
-  { name: 'CMS Editor', href: '/admin/cms', icon: MessageSquare },
   { name: 'Role Management', href: '/admin/roles', icon: Users },
   { name: 'Analytics', href: '/admin/analytics', icon: BarChart3 },
 ];

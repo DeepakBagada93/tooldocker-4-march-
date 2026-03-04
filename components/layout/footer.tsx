@@ -33,7 +33,8 @@ export function Footer() {
               <li><Link href="#" className="hover:text-primary transition-colors">Featured Brands</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Request a Quote (RFQ)</Link></li>
               <li><Link href="#" className="hover:text-primary transition-colors">Industrial Auctions</Link></li>
-              <li><Link href="#" className="hover:text-primary transition-colors">Vendor Directory</Link></li>
+              <li><Link href="/vendor" className="text-primary hover:text-white transition-colors font-bold">Vendor Dashboard</Link></li>
+              <li><Link href="/admin" className="text-primary hover:text-white transition-colors font-bold">Admin Dashboard</Link></li>
             </ul>
           </div>
 
