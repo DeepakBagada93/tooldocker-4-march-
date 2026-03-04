@@ -4,7 +4,9 @@ import { ShieldCheck, ArrowRight, Github } from 'lucide-react';
 import Link from 'next/link';
 import { signup } from '@/app/actions/auth';
 
-export default function RegisterPage({ searchParams }: { searchParams: { message: string } }) {
+export default async function RegisterPage({ searchParams }: { searchParams: Promise<{ message: string }> }) {
+  const params = await searchParams;
+
   return (
     <div className="min-h-[80vh] flex items-center justify-center py-12 px-4">
       <div className="max-w-xl w-full space-y-8 bg-white dark:bg-workshop-dark p-10 rounded-3xl border shadow-2xl relative overflow-hidden">
@@ -57,9 +59,9 @@ export default function RegisterPage({ searchParams }: { searchParams: { message
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
 
-          {searchParams?.message && (
+          {params?.message && (
             <p className="mt-4 p-4 bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400 text-center text-sm rounded-md font-bold">
-              {searchParams.message}
+              {params.message}
             </p>
           )}
         </form>

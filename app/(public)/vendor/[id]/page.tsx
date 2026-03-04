@@ -29,7 +29,7 @@ export default async function VendorPage({ params }: { params: Promise<{ id: str
           <div className="w-32 h-32 lg:w-48 lg:h-48 relative rounded-3xl overflow-hidden border-4 border-white dark:border-workshop-dark shadow-2xl shrink-0 bg-white">
             <Image src={vendor.logo} alt={vendor.name} fill className="object-cover" referrerPolicy="no-referrer" />
           </div>
-          
+
           <div className="flex-1 pb-4 space-y-4">
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
               <div className="space-y-2">
@@ -48,7 +48,7 @@ export default async function VendorPage({ params }: { params: Promise<{ id: str
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex items-center gap-3">
                 <Button variant="industrial" className="h-12 px-8">
                   <MessageSquare className="mr-2 h-4 w-4" />
@@ -114,7 +114,7 @@ export default async function VendorPage({ params }: { params: Promise<{ id: str
 
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
               {vendorProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
+                <ProductCard key={product.id} product={product as any} />
               ))}
             </div>
 

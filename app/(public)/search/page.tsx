@@ -4,12 +4,12 @@ import { FilterSidebar } from '@/components/product/filter-sidebar';
 import { Button } from '@/components/ui/button';
 import { Search as SearchIcon, SlidersHorizontal } from 'lucide-react';
 
-export default async function SearchPage({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
-  const { q } = await searchParams;
-  const query = q || '';
+export default async function SearchPage(props: { searchParams: Promise<{ q?: string }> }) {
+  const params = await props.searchParams;
+  const query = params.q || '';
 
-  const results = PRODUCTS.filter(p => 
-    p.name.toLowerCase().includes(query.toLowerCase()) || 
+  const results = PRODUCTS.filter(p =>
+    p.name.toLowerCase().includes(query.toLowerCase()) ||
     p.description.toLowerCase().includes(query.toLowerCase()) ||
     p.category.toLowerCase().includes(query.toLowerCase())
   );
@@ -46,7 +46,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
             {results.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                 {results.map((product) => (
-                  <ProductCard key={product.id} product={product} />
+                  <ProductCard key={product.id} product={product as any} />
                 ))}
               </div>
             ) : (
