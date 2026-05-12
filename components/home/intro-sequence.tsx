@@ -57,14 +57,14 @@ export function IntroSequence({ onComplete }: IntroSequenceProps) {
         }}
       />
 
-      <div className="relative text-center">
+      <div className="relative text-center w-full max-w-[100vw] px-4">
         {/* Main Title with staggered letters */}
-        <motion.div className="flex overflow-hidden px-4">
+        <motion.div className="flex flex-wrap justify-center overflow-hidden">
           {companyName.split("").map((char, index) => (
             <motion.span
               key={index}
               variants={letterVariants}
-              className="text-6xl font-black uppercase tracking-[-0.02em] text-slate-900 md:text-8xl lg:text-9xl"
+              className="text-4xl font-black uppercase tracking-[-0.02em] text-slate-900 sm:text-6xl md:text-8xl lg:text-9xl"
             >
               {char}
             </motion.span>
@@ -78,7 +78,7 @@ export function IntroSequence({ onComplete }: IntroSequenceProps) {
           transition={{ delay: 1.8, duration: 1 }}
           className="mt-6 overflow-hidden"
         >
-          <p className="text-xs font-medium uppercase tracking-[0.6em] text-stone-400 md:text-sm">
+          <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-stone-400 sm:text-xs sm:tracking-[0.4em] md:text-sm md:tracking-[0.6em]">
             {tagline}
           </p>
         </motion.div>
